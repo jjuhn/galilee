@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block head_title %} Ministry | {{ block.super }} {% endblock %}
+{% block content_a %}
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		{% include 'mini_sidebar.html' %}
+	</div>
+
+	<div class="col-xs-12 col-sm-9" >
+		<p>
+			<img src="{% static 'img/ministries/ministry.jpg' %}" class="img_row" /> 
+			<div class="line-separator"></div>
+			<h4>목회부</h4>
+			<div class="line-separator"></div>
+			목회자를 도와 교회 행정에 관한 전반적인 사역을 담당한다.<br/><br/>
+			 
+			(1) 총무팀: 교회행정, 관공서업무, 외부손님 영접<br/><br/>
+			 
+			(2) 중보기도팀: 중보기도 사역<br/><br/>
+			 
+			(3) 경조팀: 결혼식 및 장례식 등 경조사 협조<br/><br/>
+			 
+			(4) 전도팀: 지역 및 한인 전도사역<br/><br/>
+			 
+			(5) 선교팀: 선교사역 및 선교사 후원 및 홍보<br/><br/>
+			 
+			(6) 친교팀: 교회 각종 행사 기획, 준비 및 운영<br/><br/>
+		</p>
+		<br/>
+
+	</div>
+</div>
+{% endblock %}

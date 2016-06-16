@@ -1,0 +1,93 @@
+/***************************************************************
+* 	navbar entire area
+***************************************************************/
+
+.navbar {
+	min-height: 118px;
+}
+
+
+
+/***************************************************************
+*	navbar logo area
+***************************************************************/
+
+
+.navbar-brand {
+	padding: 0px;
+	min-height: 118px;
+}
+
+
+
+/***************************************************************
+*	navbar text area
+***************************************************************/
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	padding-top: 60px;
+}
+
+/* text color */
+.nav.navbar-nav.navbar-right li a {
+    color: #4e4e4e;
+}
+
+.nav-font-size {
+	font-size: 120%;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #FFAD38;
+}
+
+.navbar-default .navbar-brand {
+    color: #FFAD38;
+}
+
+
+
+ul.nav li.dropdown:hover {
+
+}
+
+/* show dropdown list when users hover it */
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+    text-align: right;
+  }
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block; 
+    border-color: #FFFFFF;   
+    text-align: right;
+}
+
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:4px !important; 
+    padding-bottom:0 !important;
+    height: 28px;
+}
+.navbar {min-height:28px !important;}
+
+
+/***************************************************************
+*	sidebar text area
+***************************************************************/
+.nav.sidebar li a {
+	color: #4e4e4e;
+}
+
+.nav.sidebar li a.sidebar_title {
+	color: #FFAD38;
+	font-size: 30px;
+}
+
+.nav.sidebar>li>a:hover {
+	color: #FFAD38;
+}
+
+
+

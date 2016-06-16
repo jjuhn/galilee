@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block head_title %} Withim | {{ block.super }} {% endblock %}
+{% block content_a %}
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		{% include 'comm_sidebar.html' %}
+	</div>
+
+	<div class="col-xs-12 col-sm-9" >
+		<p>
+			<img src="{% static 'img/community/withim.jpg' %}" class="img_row" /> 
+			<div class="line-separator"></div>
+			<h4>청년 2부</h4>
+			<h4>WITHIM</h4>
+			<h4>담당 교역자: 김숙영 목사</h4>
+			<div class="line-separator"></div>
+
+			청년이 무엇으로 그 행실을 깨끗하게 하리이까 <br/>
+			주의 말씀만 지킬 따름이니이다 <br/>
+			내가 주께 범죄하지 아니하려 하여 <br/>
+			주의 말씀을 내 마음에 두었나이다 <br/>
+			– 시 119:9,11 <br/><br/> 
+			 
+			갈릴리 교회 청년 2부는 거룩한 영향력으로 교회를 부흥시키고 청년 1부와 장년부를 이어주는 징검다리로서의 역할을 감당하고 있습니다.<br/>
+			갈릴리교회의 31세 이상 청년들로 구성되어 있으며, 이름처럼 하나님과 함께 동행하며 말씀 가운데 우리의 행실과 삶이 ‘신행일치’ 하고자 함께 세워가는 공동체입니다.<br/><br/>
+			 
+			위딤 청년부 임원 <br/><br/>
+
+			회장: 황용상 <br/>
+			총무: 김은정 <br/>
+			회계: 최원영 <br/><br/>
+
+			위딤 청년부 목장<br/><br/>
+			 
+			프랑스 목장<br/>
+			브라질 목장<br/>
+			그리스 목장<br/><br/>
+
+		</p>
+		<br/>
+
+	</div>
+</div>
+{% endblock %}

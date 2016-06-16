@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head_title %} Location | {{ block.super }} {% endblock %}
+
+{% block content_a %}
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		{% include 'welcome_sidebar.html' %}
+	</div>
+
+	<div class="col-xs-12 col-sm-9" >
+		<p>
+			<img src="{% static 'img/welcome/Galilee_main_Dec01-1000x395.jpg' %}" class="img_row" /> 
+		</p>
+		<br/>
+		<p>
+			<img src="{% static 'img/welcome/Galilee_main_Dec02-1000x395.jpg' %}" class="img_row" /> 
+		</p>
+		<br/>
+		<p>
+			<img src="{% static 'img/welcome/time_place_03.jpg' %}" class="img_row"/>
+			<div class="line-separator"></div>
+			761 CARDERO ST. VANCOUVER, BC
+		</p>
+
+		<br/>
+		<p>
+			<img src="{% static 'img/welcome/time_place_04.jpg' %}" class="img_row" />
+			<div class="line-separator"></div>
+			1755 DAVIE ST. VANCOUVER, BC <br/>
+			BESTWESTERN PLUS SANDS
+		</p>
+
+	</div>
+</div>
+{% endblock %}

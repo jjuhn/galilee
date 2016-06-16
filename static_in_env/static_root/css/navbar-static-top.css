@@ -1,0 +1,26 @@
+body {
+  min-height: 2000px;
+}
+
+
+.navbar {
+	min-height: 118px;
+}
+
+.navbar-brand {
+	padding: 0px;
+	min-height: 118px;
+}
+
+.navbar-default .navbar-brand {
+    color: #FFAD38;
+}
+
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #FFAD38;
+}
+

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block head_title %} Worship | {{ block.super }} {% endblock %}
+{% block content_a %}
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		{% include 'mini_sidebar.html' %}
+	</div>
+
+	<div class="col-xs-12 col-sm-9" >
+		<p>
+			<img src="{% static 'img/ministries/worship.jpg' %}" class="img_row" /> 
+			<div class="line-separator"></div>
+			<h4>예배부</h4>
+			<div class="line-separator"></div>
+			교회 내외의 예배에 관한 전반적인 사역을 담당한다.<br/><br/>
+ 
+			(1) 찬양팀: 찬양팀 조직 및 운영<br/><br/>
+ 
+			(2) 성례팀: 성찬 및 세례 준비<br/><br/>
+ 
+			(3) 안내팀: 예배 및 집회 안내위원 관리 및 운영<br/><br/>
+ 
+			(4) 미디어팀: 교회 홈페이지 관리, 방송시설 관리/운영, 촬영 및 녹화<br/><br/>
+ 
+			(5) 영접팀: 새가족 주일 영접 및 환영<br/><br/>
+
+		</p>
+		<br/>
+
+	</div>
+</div>
+{% endblock %}

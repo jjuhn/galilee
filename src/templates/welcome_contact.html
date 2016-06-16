@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head_title %} Contact | {{ block.super }} {% endblock %}
+
+{% block content_a %}
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		{% include 'welcome_sidebar.html' %}
+	</div>
+
+	<div class="col-xs-12 col-sm-9">
+		<p>
+			<img src="{% static 'img/welcome/contact_us.jpg' %}" class="img_row" />
+			<div class="line-separator"></div>
+			갈릴리 교회 <br/>
+			761 Cardero Street, Vancouver, BC. V6G 2G3, Canada <br/>
+			Tel: 604.657.3937 <br/>
+			Email: galilee_pastor@hotmail.com <br/>
+		</p>
+		
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+body { 
+	padding-top: 120px; 
+	font-family: 'Oswald', sans-serif;
+	color: #4e4e4e;
+}
+
+/***************************************************************
+*	Spacing in common area
+***************************************************************/
+div.top-padding {
+	margin-top: 50px;
+}
+
+p.top-padding {
+	margin-top: 20px;
+}
+
+
+/***************************************************************
+*	Home page (Carousel Slide) - maximize image size  
+* 	width: 1140;
+***************************************************************/
+.carousel img {
+    min-width: 100%;
+}
+
+
+.content-center {
+	text-align: center;
+}
+
+
+/***************************************************************
+*	Font Awesome icon color
+***************************************************************/
+.fa {
+  color: #4e4e4e;
+}
+
+.fa:hover {
+  color: #FFAD38;
+}
+
+
+/***************************************************************
+*	Line divider
+***************************************************************/
+.line-separator {
+	height: 1px;
+	width: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: left;
+	border-bottom: 1px solid #FFAD38;
+}
+
+
+
+
+/***************************************************************
+*	image size
+***************************************************************/
+.img_column {
+	width: 350px;
+	height: 500px;
+}
+
+.img_square {
+	width: 400px;
+	height: 400px;
+}
+
+.img_row {
+	width: 100%;
+}
+
+
+@media screen and (max-width: 762px;) {
+	.img_adult_group {
+		width: 350px;
+		height: 250px;	
+	}		
+}
+.img_adult_group {
+	width: 100%;
+	height: 250px;	
+}
+

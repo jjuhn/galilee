@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+    <title>{% block head_title %}Galilee Church{% endblock %} </title>
+
+    {% include 'base_head_css.html' %}
+    <style>
+    {% block style %}{% endblock %}
+    </style>
+
+</head>
+
+<body>
+    {% include 'base_navbar.html' %}
+
+    <div class="container">
+
+        <hr>
+
+        {% block content_a %}
+        {% endblock%}
+
+        
+
+        {% block content_b %}
+        {% endblock%}
+        
+
+        <hr> 
+
+    </div> <!-- /container -->
+
+</body>
+    <!-- footer -->
+    <div class="footer">
+        <div class="panel-footer text-center ">©2016 Galilee Korean Presbyterian Church | 761 Cardero St. Vancouver, BC V6E 1X2</div>
+    </div>
+    {% include "base_javascript.html" %}
+</html>

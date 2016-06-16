@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head_title %} About | {{ block.super }} {% endblock %}
+
+{% block content_a %}
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		{% include 'welcome_sidebar.html' %}
+
+	</div>
+
+	<div class="col-xs-12 col-sm-9">
+		<img src="{% static 'img/welcome/about_galilee.jpg' %}"  class="img_row"/>
+		
+		<div class="line-separator"></div>
+		<h4>갈릴리 교회 연혁 </h4>
+		<br/>
+		<p>
+			1994.06<br/>
+			개척교회 준비 기도회 시작<br/><br/>
+			 
+			1994.09.25<br/>
+			노스 웨스트 한인 장로교회 창립 및 조영택 목사 위임 예배(St. Andrew’s & St. Stephen’s Presbyterian Church, 2641 Chesterfield Avenue, North Vancouver)<br/><br/>
+			 
+			1994.10.06<br/>
+			웨스트 밴쿠버에 예배처소 정함(West Vancouver Presbyterian Church, 2893 Marine Drive, West Vancouver)<br/><br/>
+			 
+			1995.06.04<br/>
+			예배 처소 이전(St. David United Church, 1525 Taylor Way, West Vancouver)<br/><br/>
+			 
+			1996.11.15<br/>
+			유학생 선교 센터 개소(St. Andrew’s & Wesley United Church, 1022 Nelson Street, Vancouver)<br/><br/>
+			 
+			1997.05.04<br/>
+			갈릴리교회로 개명하여 밴쿠버 다운타운으로 이전(Central Presbyterian Church, 1155 Thurlow St. Vancouver)<br/><br/>
+			 
+			1998.10.04<br/>
+			김범준, 김인선, 황승일 장로 장립<br/><br/>
+			 
+			2001.12.01<br/>
+			유현복, 문봉선 명예권사 취임<br/><br/>
+			 
+			2002.12<br/>
+			밴쿠버 이스트로 예배 처소 이전(Lakeview United Church, 2776 Semlin Drive, Vancouver)<br/><br/>
+			 
+			2003.01.01<br/>
+			센트럴 교회로 복귀<br/><br/>
+			 
+			2009.02.01<br/>
+			김후식 목사 2대 담임 부임 (2012 01 31 사임)<br/><br/>
+			 
+			2009.02.28<br/>
+			조영택 원로목사 추대 및 김후식 담임 목사 위임 예배<br/><br/>
+			 
+			2011.06.18<br/>
+			위임식 (안수집사: 남충현, 허용범 / 권사: 남애경, 나인경, 천성미), 명예안수집사(조대영), 명예권사(안필순)<br/><br/>
+			 
+			2012.04.01<br/>
+			류문현 목사 3대 담임 부임<br/><br/>
+			 
+			2012.06.15<br/>
+			류문현 담임목사 위임 예배<br/><br/>
+			 
+			2015.01.04<br/>
+			위임식 (안수집사: 최현범, 김정기, 정현철 / 권사: 정영혜, 김윤희A, 홍현승), 안수집사 취임(황대근)<br/><br/>
+		</p>
+		<br/>
+
+
+		<div class="line-separator"></div>
+		<h4>갈릴리 교회 교단 한카노회 소개글</h4>
+		<br/>
+		<p>
+			PRESBYTERIANS IN CANADA<br/>
+			The roots of The Presbyterian Church in Canada are Scottish (our mother Church was the Church of Scotland which is Presbyterian), but our Canadian heritage includes the work and witness of French Huguenots (Protestant) settlers who came to Canada in the 1600s. Of course, many people have come, and continue to come, into our denomination from other branches of the Christian Church.<br/>
+			Many Presbyterians in Canada have their churches named after Reformers, particularly John Calvin (a Frenchman) and John Knox (a Scot who was influenced by Calvin’s teachings). John Calvin (1509-1564) has often been called the “father” of Presbyterianism. Calvin lived in Geneva, Switzerland. From there, Presbyterianism spread through Europe. Calvin, like other reformers, worked hard to develop a church where everyone, not just the clergy, shared responsibilities. Schools were established to provide education for both clergy and laity. John Knox (1515-1572), after studying with Calvin in Geneva, returned to his native Scotland to establish Presbyterianism. It soon spread to northern Ireland, the United States and Canada. In 1875 several groups of Presbyterians formed a union and called themselves The Presbyterian Church. Our Church has been independent since then.
+			Today, The Presbyterian Church in Canada has about 1,000 congregations with members coming from many national and racial backgrounds. For example there are now 20 Korean congregations. Within our denomination there are many different languages and styles of worship. There are congregations that worship in English, French, Korean, Chinese, Taiwanese, Hungarian, Spanish and Portuguese. In the 1990s The Presbyterian Church in Canada has welcomed new Korean and Ghanaian congregations.<br/><br/>
+			 
+			 
+			WHAT WE BELIEVE<br/>
+			What is Important to Us<br/>
+			As Presbyterians, we believe in the triune God. In other words, God is one God, yet revealed in three persons, Father, Son and Holy Spirit. We believe that the Bible is the written revelation of who God is. It is important to gather weekly for worship and to also regularly experience the sacraments of communion. Baptism is seen as a visible sign of God’s promise to God’s people.<br/>
+		</p>
+		<br/>
+
+
+		<div class="line-separator"></div>
+		<h4>역대 담임 목사</h4>
+		<br/>
+		<p>
+			<div class="row">
+				<div class="col-sm-6"> 
+					<img src="{% static 'img/welcome/jo.jpg' %}" class="img_column"/>
+					<br/>
+					<p>
+						<br/>
+						조영택 원로 목사 <br/>
+						1994 – 2008 <br/>
+					</p>
+				</div>
+
+
+				<div class="col-sm-6"> 
+					<img src="{% static 'img/welcome/kim.jpg' %}" class="img_column"/>
+					<br/>
+					<p>
+						<br/>
+						김후식 목사<br/>
+						2009 – 2011<br/>
+					</p>
+				</div>
+			</div>
+		</p>
+		<br/>
+
+	</div>
+</div>
+{% endblock %}
+
+
+<!--
+		<div class="line-separator"></div>
+		<h4>교회 비전</h4>
+		<br/>
+		<p>
+
+		</p>
+		<br/>
+-->

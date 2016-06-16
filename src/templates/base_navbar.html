@@ -1,0 +1,69 @@
+{% load staticfiles %} 
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+        
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static 'img/galilee-logo.png' %}"/>
+      </a>
+    </div>
+
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right nav-font-size">
+        
+        <li class="dropdown">
+          <a href="{% url 'mission' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">WELCOME</a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'mission' %}">교회 비전</a></li>
+            <li><a href="{% url 'about' %}">교회 소개</a></li>
+            <li><a href="{% url 'staff' %}">섬기는 이</a></li>
+            <li><a href="{% url 'location' %}">예배 안내</a></li>
+            <li><a href="{% url 'contact' %}">연락처</a></li>
+          </ul>
+        </li>
+        
+        <li class="dropdown">
+          <a href="{% url 'ministry' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">MINISTRIES</a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'ministry' %}">목회부</a></li>
+            <li><a href="{% url 'finance' %}">재정부</a></li>
+            <li><a href="{% url 'worship' %}">예배부</a></li>
+            <li><a href="{% url 'rearing' %}">양육부</a></li>
+          </ul> 
+        </li>
+        
+        <li class="dropdown">
+          <a href="{% url 'awana' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">COMMUNITY</a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'awana' %}">Awana</a></li>
+            <li><a href="{% url 'gaddiel' %}">GADDIEL(유스)</a></li>
+            <li><a href="{% url 'joys' %}">JOYS(청년1부)</a></li>
+            <li><a href="{% url 'withim' %}">WITHIM(청년2부)</a></li>
+            <li><a href="{% url 'adult' %}">장년부</a></li>
+          </ul> 
+        </li>
+        
+        <li class="dropdown">
+          <a href="{% url 'photo' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">MEDIA</a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url 'photo' %}">사진</a></li>
+            <li><a href="{% url 'video' %}">비디오</a></li>
+          </ul> 
+        </li>
+
+        <li>
+          <a href="{% url 'news' %}">NEWS</a>
+        </li>
+
+      </ul>
+    </div><!--/.nav-collapse -->
+
+
+  </div>
+</nav>

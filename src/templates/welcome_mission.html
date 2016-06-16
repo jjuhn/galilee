@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head_title %} Mission | {{ block.super }} {% endblock %}
+
+{% block content_a %}
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		{% include 'welcome_sidebar.html' %}
+	</div>
+
+	<div class="col-xs-12 col-sm-9">
+		<img src="{% static 'img/ministry.jpg' %}" class="img_row"/>
+		
+		<div class="line-separator"></div>
+		<h4> 인사말 </h4>
+		<br/>
+		<p>
+			예수님을 사랑하십니까? <br/>
+			다음세대를 향한 하나님의 마음을 가지고 밴쿠버 다운타운에서 예배, 친교, 훈련으로 하나된 공동체,
+			갈릴리교회에 오신 모든 분들을 환영하고 축복합니다.
+		</p>
+		<br/>
+		
+		<div class="line-separator"></div>
+		<h4>교회 비전</h4>
+		<br/>
+		<p>
+			MOTTO<br/>
+			행복한 교회<br/><br/>
+			 
+			“내가 이것을 너희에게 이름은 내 기쁨이 너희 안에 있어 너희 기쁨을 충만하게 하려 함이라”<br/>
+			(요한복음 15장 11절)<br/><br/>
+			 
+			1) 갈릴리교회 때문에 하나님이 행복한가?<br/>
+			2) 갈릴리교회 때문에 성도들이 행복한가?<br/>
+			3) 갈릴리교회 때문에 지역(열방)이 행복한가?<br/><br/>
+			 
+			 
+			MISSION<br/><br/>
+			 
+			“새 계명을 너희에게 주노니 서로 사랑하라 내가 너희를 사랑한 것 같이 너희도 서로 사랑하라<br/>
+			너희가 서로 사랑하면 이로써 모든 사람이 너희가 내 제자인 줄 알리라”<br/>
+			(요한복음 13장 34-35절)<br/><br/>
+			 
+			1) 하나님이 행복해 하시는 교회가 되자. (예배)<br/>
+			2) 성도들이 행복해 하는 교회가 되자. (섬김/봉사)<br/>
+			3) 지역(열방)이 행복해 하는 교회가 되자. (전도/선교)<br/><br/>
+			 
+			 
+			MINISTRY<br/>
+			<img src="{% static 'img/welcome/vision_map.jpg' %}" />
+			<br/>
+			1) Worship<br/>
+			– 하나님의 임재를 체험하는 현장<br/>
+			– 주일예배, 금요집회, 새벽기도회<br/><br/>
+			 
+			2) Fellowship<br/>
+			– 실제적인 제자가 되어 가는 섬기는 삶의 현장<br/>
+			– 목장, 또래, 사역<br/><br/>
+			 
+			3) Discipleship<br/>
+			– 복음 및 성서적인 삶을 구체적으로 제시하고 배우는 현장<br/>
+			– 새누리과정, 온누리과정, 성경통독, 영어성경통독, 구역개론, 신약개론, 예비부부의 삶 등<br/><br/>
+		</p>
+		<br/>
+
+	</div>
+</div>
+{% endblock %}
+
+
+<!-- 
+
+		<div class="line-separator"></div>
+		<h4>교회 비전</h4>
+		<br/>
+		<p>
+
+		</p>
+		<br/>
+-->
