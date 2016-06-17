@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'GalileeChurchWeb.wsgi.application'
+#WSGI_APPLICATION = 'GalileeChurchWeb.wsgi.application'
 
 
 # Database
