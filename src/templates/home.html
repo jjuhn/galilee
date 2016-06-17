@@ -123,15 +123,22 @@ Hello
 <hr>
 
 <div class="row">
-	<div class="col-sm-6">
-		<p class="lead">
-			GALILEE MEDIA
-		</p>
-	</div>
 
 	<div class="col-sm-6">
 		<p class="lead">
-			LATEST GALILEE NEWS
+			LATEST GALILEE NEWS 
+			<div class="line-separator"></div>
+			{{ recent_post.title }} <br/><br/>
+			{{ recent_post.content|linebreaks }} <br/>
+		</p>
+	</div>
+
+
+	<div class="col-sm-6">
+		<p class="lead">
+			GALILEE MEDIA
+			<div class="line-separator"></div>
+			<img src="{% static 'img/ministries/worship.jpg' %}" class="img_row" /> 
 		</p>
 	</div>
 </div>

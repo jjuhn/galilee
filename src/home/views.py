@@ -8,33 +8,36 @@ from django.http import HttpResponse
 
 from django.conf.urls.static import static
 
+from news.models import Post
+
 # Create your views here.
 def home(request):
 	title = "Sign Up Now"
 	# if request.user.is_authenticated():
 	# 	title += " %s" %(request.user)
-
+	latest_post = Post.objects.latest('timestamp')
 	context = {
+		"recent_post" : latest_post,
 		"title": title,
 	}
 
 	# if request.method == "POST":
 	# 	print (request.POST)
 
-	if request.user.is_authenticated() and request.user.is_staff:
-		#print (SignUp.objects.all())
+	# if request.user.is_authenticated() and request.user.is_staff:
+	# 	print (SignUp.objects.all())
 		
-		# for instance in SignUp.objects.all():
-		# 	print(instance)
-		# 	print(instance.full_name)
+	# 	for instance in SignUp.objects.all():
+	# 		print(instance)
+	# 		print(instance.full_name)
 
-		# queryset = SignUp.objects.all().order_by('-timestamp').filter(full_name__icontains="BK")
-		# queryset = SignUp.objects.all().order_by('-timestamp').filter(full_name__iexact="BK")
-		queryset = SignUp.objects.all().order_by('-timestamp')
-		print (SignUp.objects.all().order_by('-timestamp').filter(full_name__iexact="BK").count())
-		context = {
-			"queryset": queryset
-		}
+	# 	queryset = SignUp.objects.all().order_by('-timestamp').filter(full_name__icontains="BK")
+	# 	queryset = SignUp.objects.all().order_by('-timestamp').filter(full_name__iexact="BK")
+	# 	queryset = SignUp.objects.all().order_by('-timestamp')
+	# 	print (SignUp.objects.all().order_by('-timestamp').filter(full_name__iexact="BK").count())
+	# 	context = {
+	# 		"queryset": queryset
+	# 	}
 
 	return render(request, "home.html", context) # {} is context
 
