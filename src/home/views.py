@@ -93,8 +93,8 @@ def video(request):
 	return render(request, "media_video.html", {})
 
 
-def news(request):
-	return render(request, "news.html", {})	
+# def news(request):
+# 	return render(request, "news.html", {})	
 
 
 # this is not using a model form, so we cannot save data

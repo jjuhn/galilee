@@ -1,7 +1,34 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% load crispy_forms_tags %}
 
 
 
 {% block head_title %} News | {{ block.super }} {% endblock %}
-News.html
+{% block content_a %}
+
+
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		
+	</div>
+
+	<div class="col-xs-12 col-sm-9" >
+		{% for obj in object_list %}
+
+		<h1>{{ obj.title }} </h1><br/>
+		<div class="line-separator"></div>
+		{{ obj.content|linebreaks }}
+		<br/>
+		<!-- {{ obj.timestamp }} <br/>
+		{{ obj.updated }} <br/>
+		{{ obj.id }} <br/> -->
+		<hr>
+
+		{% endfor %}
+
+	</div>
+</div>
+
+
+{% endblock %}

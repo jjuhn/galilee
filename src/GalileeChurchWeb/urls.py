@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+#from news import views as news_view
+#url(r'^news/$', 'news_view.posts_home', name='news'),
+
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # my own pages
@@ -49,8 +53,9 @@ urlpatterns = [
     url(r'^media/photo/$', 'home.views.photo', name='photo'),
     url(r'^media/video/$', 'home.views.video', name='video'),
 
-    url(r'^news/$', 'home.views.news', name='news'),
+    url(r'^news/$', 'news.views.posts_home', name='news'),
 
     # not using
     # url(r'^$', 'home.views.contact', name='contact'), 
+
 ]
