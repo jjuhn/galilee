@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
-import os
+import os, sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,12 +21,21 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-with open('/etc/galilee_ki.txt') as f:
-    SECRET_KEY = f.read().strip()
+if sys.platform.startswith('linux'):
+    with open('/etc/galilee_ki.txt') as f:
+        SECRET_KEY = f.read().strip()
+
+    DEBUG = False
+    ALLOWED_HOSTS = ['galileevan.com', '.galileevan.com']
+else:
+    with open(r'c:\etc\galilee_ki.txt') as f:
+        SECRET_KEY = f.read().strip()
+
+    DEBUG = True
+    ALLOWED_HOSTS = []
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['galileevan.com', '.galileevan.com']
+
 
 
 # Application definition
