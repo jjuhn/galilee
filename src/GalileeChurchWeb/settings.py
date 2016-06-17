@@ -24,7 +24,6 @@ SECRET_KEY = '$ph)isg1yws-x)^32mu+h2^g$(ufib=60%fll&ovhw-i(4%2uv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = []
 
 

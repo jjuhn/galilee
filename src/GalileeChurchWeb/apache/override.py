@@ -1,5 +1,5 @@
 from GalileeChurchWeb.settings import *
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ["www.galileevan.com", "galileevan.com"]
 
