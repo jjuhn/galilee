@@ -38,6 +38,7 @@ else:
 
 #SESSION_COOKIE_DOMAIN = None
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',    
+    'django.contrib.staticfiles',
+ #   'django.contrib.sites',    
     # third party apps 
     'crispy_forms',
     #'registration',
@@ -54,6 +56,8 @@ INSTALLED_APPS = [
     'home',
     'news',
 ]
+
+#SITE_ID = 1
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
