@@ -26,7 +26,7 @@ if sys.platform.startswith('linux'):
         SECRET_KEY = f.read().strip()
 
     DEBUG = False
-    ALLOWED_HOSTS = ['galileevan.com', '.galileevan.com']
+    ALLOWED_HOSTS = ['galileevan.com', '.galileevan.com', 'galileevan.com/admin']
 else:
     with open(r'c:\etc\galilee_ki.txt') as f:
         SECRET_KEY = f.read().strip()
@@ -36,7 +36,7 @@ else:
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-
+#SESSION_COOKIE_DOMAIN = None
 
 # Application definition
 
