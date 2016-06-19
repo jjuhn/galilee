@@ -13,49 +13,60 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 
+from home.views import (
+    home,
+    welcome, mission, about, staff, location, contact,
+    ministries, ministry, finance, worship, rearing,
+    community, awana, gaddiel, joys, withim,adult,
+    media, photo, video,
+    )
+
+from news.views import (
+    posts_home,
+    )
 #from news import views as news_view
 #url(r'^news/$', 'news_view.posts_home', name='news'),
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # posts (mock up)
+    url(r'^posts/', include("posts.urls")),
     # my own pages
-    url(r'^$', 'home.views.home', name='home'),
+    url(r'^$', home, name='home'),
     
-    url(r'^mission/$', 'home.views.welcome', name='welcome'),
-    url(r'^mission/$', 'home.views.mission', name='mission'),
-    url(r'^about/$', 'home.views.about', name='about'),
-    url(r'^staff/$', 'home.views.staff', name='staff'),
-    url(r'^location/$', 'home.views.location', name='location'),
-    url(r'^contact/$', 'home.views.contact', name='contact'),
+    url(r'^mission/$', welcome, name='welcome'),
+    url(r'^mission/$', mission, name='mission'),
+    url(r'^about/$', about, name='about'),
+    url(r'^staff/$', staff, name='staff'),
+    url(r'^location/$', location, name='location'),
+    url(r'^contact/$', contact, name='contact'),
 
 
 
-    url(r'^ministries/$', 'home.views.ministries', name='ministries'),
-    url(r'^ministries/ministry$', 'home.views.ministry', name='ministry'),
-    url(r'^ministries/finance$', 'home.views.finance', name='finance'), # 
-    url(r'^ministries/worship$', 'home.views.worship', name='worship'), # 
-    url(r'^ministries/rearing$', 'home.views.rearing', name='rearing'), # 
+    url(r'^ministries/$', ministries, name='ministries'),
+    url(r'^ministries/ministry$', ministry, name='ministry'),
+    url(r'^ministries/finance$', finance, name='finance'), # 
+    url(r'^ministries/worship$', worship, name='worship'), # 
+    url(r'^ministries/rearing$', rearing, name='rearing'), # 
 
 
 
-    url(r'^community/$', 'home.views.community', name='community'),
-    url(r'^community/awana$', 'home.views.awana', name='awana'),
-    url(r'^community/gaddiel$', 'home.views.gaddiel', name='gaddiel'),
-    url(r'^community/joys$', 'home.views.joys', name='joys'),
-    url(r'^community/withim$', 'home.views.withim', name='withim'),
-    url(r'^community/adult$', 'home.views.adult', name='adult'),
+    url(r'^community/$', community, name='community'),
+    url(r'^community/awana$', awana, name='awana'),
+    url(r'^community/gaddiel$', gaddiel, name='gaddiel'),
+    url(r'^community/joys$', joys, name='joys'),
+    url(r'^community/withim$', withim, name='withim'),
+    url(r'^community/adult$', adult, name='adult'),
 
-    url(r'^media/$', 'home.views.media', name='media'),
-    url(r'^media/photo/$', 'home.views.photo', name='photo'),
-    url(r'^media/video/$', 'home.views.video', name='video'),
+    url(r'^media/$', media, name='media'),
+    url(r'^media/photo/$', photo, name='photo'),
+    url(r'^media/video/$', video, name='video'),
 
-    url(r'^news/$', 'news.views.posts_home', name='news'),
+    url(r'^news/$', posts_home, name='news'),
 
-    # not using
-    # url(r'^$', 'home.views.contact', name='contact'), 
 
 ]
