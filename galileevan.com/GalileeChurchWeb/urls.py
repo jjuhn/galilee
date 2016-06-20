@@ -13,8 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls import url, include
+from django.conf.urls.static import static
 from django.contrib import admin
+
 
 from home.views import (
     home,
@@ -33,8 +36,7 @@ from news.views import (
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # posts (mock up)
-    url(r'^posts/', include("posts.urls")),
+    
     # my own pages
     url(r'^$', home, name='home'),
     
@@ -69,4 +71,13 @@ urlpatterns = [
     url(r'^news/$', posts_home, name='news'),
 
 
+
+    # posts (mock up)
+    url(r'^posts/', include("posts.urls", namespace='posts')),
+
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

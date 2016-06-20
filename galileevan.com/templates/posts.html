@@ -2,22 +2,18 @@
 {% load staticfiles %}
 {% load crispy_forms_tags %}
 
-
-
 {% block head_title %} Posts | {{ block.super }} {% endblock %}
+
 {% block content_a %}
-
-
 <div class="row">
 	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
 		
 	</div>
 
 	<div class="col-xs-12 col-sm-9" >
-		<h1>hello</h1>
+		{%  include "messages_display.html" %}
 
+		{% block post_block %}	{% endblock post_block %}
 	</div>
 </div>
-
-
 {% endblock %}
