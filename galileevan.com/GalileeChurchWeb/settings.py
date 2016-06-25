@@ -34,6 +34,14 @@ else:
     DEBUG = True
     ALLOWED_HOSTS = []
 
+
+    with open(r'c:\etc\email_ki.txt') as f:
+        EMAIL_HOST_PASSWORD = f.read().strip()
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = 'pysniperr@gmail.com'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+
 # SECURITY WARNING: don't run with debug turned on in production!
 
 #SESSION_COOKIE_DOMAIN = None
@@ -46,19 +54,18 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
- #   'django.contrib.sites',    
+    'django.contrib.staticfiles',  
     # third party apps 
     'crispy_forms',
-    #'registration',
+    'registration',
     # my apps
     'home',
     'news',
     'posts',
 ]
 
-#SITE_ID = 1
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -152,8 +159,16 @@ STATICFILES_DIRS = [
 ]
 
 # from anywhere to media 
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_root")
 
+
+# crispy FORM TAGs settings
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+
+# django registration redux settings
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'

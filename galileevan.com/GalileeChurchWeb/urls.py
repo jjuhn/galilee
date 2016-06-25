@@ -24,7 +24,9 @@ from home.views import (
     welcome, mission, about, staff, location, contact,
     ministries, ministry, finance, worship, rearing,
     community, awana, gaddiel, joys, withim,adult,
-    media, photo, video,
+    media, photo, video, 
+    # login, register, pwd_reset,
+    user_settings,
     )
 
 from news.views import (
@@ -70,10 +72,19 @@ urlpatterns = [
 
     url(r'^news/$', posts_home, name='news'),
 
+    # url(r'^login/$', login, name='login'),   
+    # url(r'^register/$', register, name='register'),   
+    # url(r'^pwd_reset/$', pwd_reset, name='pwd_reset'),   
+
 
 
     # posts (mock up)
     url(r'^posts/', include("posts.urls", namespace='posts')),
+    # django registration redux
+    url(r'^accounts/', include('registration.backends.default.urls')),
+    
+    # user settings page
+    url(r'^settings/', user_settings, name='settings'),
 
 ]
 

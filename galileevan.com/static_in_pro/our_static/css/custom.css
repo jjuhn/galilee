@@ -1,7 +1,44 @@
+/***************************************************************
+*	Change color while dragging
+***************************************************************/
+::-moz-selection { /* Code for Firefox */
+	color: white;
+    background: #FFAD38;
+}
+
+::selection {
+	color: white;
+    background: #FFAD38;
+}
+
+/***************************************************************
+*	Basic css
+***************************************************************/
+html, body {
+  height: 100%;
+}
+
+
+#footer {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+} 
+
+
 body { 
 	padding-top: 148px; 
+	padding-bottom: 150px;
 	font-family: 'Oswald', sans-serif;
 	color: #4e4e4e;
+}
+
+
+.text-color-orange {
+	color: #FFAD38;
+}
+
+.text-color-orange:hover {
+	color: #eea236;
 }
 
 /***************************************************************
@@ -85,4 +122,13 @@ p.top-padding {
 	width: 100%;
 	height: 250px;	
 }
+
+
+
+
+
+
+
+
+
 
