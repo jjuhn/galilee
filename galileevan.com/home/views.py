@@ -1,14 +1,44 @@
 from django.conf import settings
+from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.core.mail import send_mail
-from .forms import SignUpForm, ContactForm
 from .models import SignUp
+from .forms import SignUpForm
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 
 from django.conf.urls.static import static
 
 from news.models import Post
+
+
+
+def user_settings(request):
+	form = SignUpForm(request.POST or None)
+	context = {
+		"form": form,
+	}	
+
+	# if request.method == "POST":
+	# 	print (request.POST)
+	print (request.user)
+
+	user = User.objects.get(username=request.user)
+	if form.is_valid() and request.method == "POST":  # go through whole validation in forms.py 
+		#instance = form.save(commit=False)
+		
+		user.first_name = form.cleaned_data.get("first_name")
+		user.last_name = form.cleaned_data.get("last_name")
+		user.save()
+		message = "Your information is saved."
+		context = {
+			"form": form,
+			"message": message,
+		}
+
+	
+
+	return render(request, "user_settings.html", context) 
 
 # Create your views here.
 def home(request):
@@ -95,6 +125,15 @@ def photo(request):
 def video(request):
 	return render(request, "media_video.html", {})
 
+
+# def login(request):
+# 	return render(request, "login.html", {})
+
+# def register(request):
+# 	return render(request, "register.html", {})	
+
+# def pwd_reset(request):
+# 	return render(request, "pwd_reset.html", {})		
 
 # def news(request):
 # 	return render(request, "news.html", {})	

@@ -1,0 +1,14 @@
+{% load i18n %}
+{% trans "Activate account at" %} {{ site.name }}:
+
+안녕하세요! 갈릴리 성도 여러분, 
+새로운 계정을 활성화시키기 위해 아래 링크를 클릭해 주세요.
+
+Hello! 
+Click the link below to activate your account.
+
+http://{{ site.domain }}{% url 'registration_activate' activation_key %}
+
+{% blocktrans %}The above link is valid for {{ expiration_days }} days.{% endblocktrans %}
+
+-PS

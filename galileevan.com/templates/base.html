@@ -15,6 +15,7 @@
     <title>{% block head_title %}Galilee Church{% endblock %} </title>
 
     {% include 'base_head_css.html' %}
+    {% include "base_javascript.html" %}
     <style>
     {% block style %}{% endblock %}
     </style>
@@ -22,29 +23,27 @@
 </head>
 
 <body>
-    {% include 'base_navbar.html' %}
+    <div id="wrapper">
+        <div id="header"> {% include 'base_navbar.html' %} </div>
+        <div id="content">
+            <div class="container">
 
-    <div class="container">
+                <hr>
 
-        <hr>
+                {% block content_a %}
+                {% endblock%}
 
-        {% block content_a %}
-        {% endblock%}
+                
 
-        
+                {% block content_b %}
+                {% endblock%}
+                
 
-        {% block content_b %}
-        {% endblock%}
-        
+                <hr> 
 
-        <hr> 
-
-    </div> <!-- /container -->
-
+            </div> <!-- /container -->
+        </div>
+        <div id="footer" class="content-center">©2016 Galilee Korean Presbyterian Church | 761 Cardero St. Vancouver, BC V6E 1X2</div>
 </body>
-    <!-- footer -->
-    <div class="footer">
-        <div class="panel-footer text-center ">©2016 Galilee Korean Presbyterian Church | 761 Cardero St. Vancouver, BC V6E 1X2</div>
-    </div>
-    {% include "base_javascript.html" %}
+
 </html>
