@@ -1,0 +1,2 @@
+{% load i18n %}
+{% trans "Activate account at" %} Complete Registration for {{ site.name }}
