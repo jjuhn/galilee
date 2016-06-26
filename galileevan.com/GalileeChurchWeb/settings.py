@@ -27,6 +27,13 @@ if sys.platform.startswith('linux'):
 
     DEBUG = False
     ALLOWED_HOSTS = ['galileevan.com', '.galileevan.com', 'galileevan.com/admin']
+
+
+    with open('/etc/email_ki.txt') as f:
+        EMAIL_HOST_PASSWORD = f.read().strip()
+    EMAIL_HOST_USER = 'galileevan.com@gmail.com'
+    #EMAIL_HOST_USER = 'pysniperr@gmail.com'
+
 else:
     with open(r'c:\etc\galilee_ki.txt') as f:
         SECRET_KEY = f.read().strip()
@@ -37,10 +44,14 @@ else:
 
     with open(r'c:\etc\email_ki.txt') as f:
         EMAIL_HOST_PASSWORD = f.read().strip()
-    EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_HOST_USER = 'pysniperr@gmail.com'
-    EMAIL_PORT = 587
-    EMAIL_USE_TLS = True
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+#EMAIL_HOST_USER = 'galileevan.com@gmail.com'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
@@ -163,12 +174,14 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_root")
 
 
-# crispy FORM TAGs settings
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 
-# django registration redux settings
+
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+REGISTRATION_EMAIL_HTML = False
