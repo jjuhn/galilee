@@ -13,21 +13,35 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 
 
-
+from django.views.generic.edit import FormView
 from posts.models import Post
-from .forms import PostForm
+from .forms import PostForm, UploadFileForm
+
+from .models import upload_location
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render
 
 
 
-# Create your views here.
-# def posts_home(request):
-# 	queryset = Post.objects.all().order_by('-timestamp')
-# 	context = {
-# 		"object_list": queryset,
-# 		"title": "Galilee News"
+def handle_uploaded_file(f):
+	with open(r'c:\etc\temp.txt' + str(count), 'wb+') as destination:
+		for chunk in f.chunks():
+			destination.write(chunk)
 
-# 	}
-# 	return render(request, "posts.html", context)	
+
+def upload_file(request):
+	if request.method == 'POST':
+		form = UploadFileForm(request.POST, request.FILES)
+		if form.is_valid():
+			instance = form.save(commit=False)
+			handle_uploaded_file(request.FILES['file'])
+			return HttpResponseRedirect(instance.get_absolute_url())
+	else:
+		form = UploadFileForm()
+	return render(request, 'post_form.html', {'form': form})
+
+
+
 
 
 def posts_create(request):
@@ -36,10 +50,20 @@ def posts_create(request):
 	# if not request.user.is_authenticated():
 	# 	raise Http404
 
+
+
 	form = PostForm(request.POST or None, request.FILES or None)
 	if form.is_valid():
 		instance = form.save(commit=False)
 		instance.user = request.user
+		
+		for count, x in enumerate(request.FILES.getlist("files")):
+			def process(f):
+			    with open(r'c:\etc\temp.txt' + str(count), 'wb+') as destination:
+			        for chunk in f.chunks():
+			            destination.write(chunk)
+			process(x)
+
 		instance.save()
 		messages.success(request, "Successfully Created!")
 		return HttpResponseRedirect(instance.get_absolute_url())
@@ -52,8 +76,8 @@ def posts_create(request):
 	}
 	return render(request, "post_form.html", context)
 
-def posts_detail(request, slug):
-	instance = get_object_or_404(Post, slug=slug)
+def posts_detail(request, id):
+	instance = get_object_or_404(Post, id=id)
 	share_string = quote_plus(instance.content)
 	context = {
 		"title": instance.title,
@@ -113,10 +137,10 @@ def posts_list(request):
 
 
 
-def posts_update(request, slug=None):
+def posts_update(request, id=None):
 	if not request.user.is_staff or not request.user.is_superuser:
 		raise Http404
-	instance = get_object_or_404(Post, slug=slug)
+	instance = get_object_or_404(Post, id=id)
 	form = PostForm(request.POST or None, request.FILES or None, instance=instance)
 	if form.is_valid():
 		instance = form.save(commit=False)
@@ -133,10 +157,10 @@ def posts_update(request, slug=None):
 	}
 	return render(request, "post_form.html", context)
 
-def posts_delete(request, slug=None):
+def posts_delete(request, id=None):
 	if not request.user.is_staff or not request.user.is_superuser:
 		raise Http404
-	instance = get_object_or_404(Post, slug=slug)
+	instance = get_object_or_404(Post, id=id)
 	instance.delete()
 	messages.success(request, "Successfully Deleted!")
 	return redirect("posts:list")

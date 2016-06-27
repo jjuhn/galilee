@@ -8,15 +8,42 @@
 
 {% block post_block %}
 
-<h1>{{title}}&nbsp;&nbsp;&nbsp;&nbsp;<small> {{ instance.timestamp }}</small></h1><br/>
-
+	
+	<h1>{{title}}&nbsp;&nbsp;&nbsp;&nbsp;<small> 
+	
 	{% if instance.user.get_full_name %}
-	<p> Author: {{ instance.user.get_full_name }} </p>
+	Author: {{ instance.user.get_full_name }}
+	{% else %}
+	Author: {{ instance.user.get_username }}
 	{% endif %}
+	</small>
+
+	<p class='pull-right'>
+	<a href="{{ instance.get_edit_url }}" class="btn btn-warning" role="button">Edit</a>
+	<a href="{{ instance.get_delete_url }}" class="btn btn-danger" role="button">Delete</a> 
+	</p>
+	</h1>
+
 
 	{% if instance.image %}
 	<p><img src='{{ instance.image.url }}' class='img-responsive'/></p>
 	{% endif %}
+
+	{% if instance.image2 %}
+	<p><img src='{{ instance.image2.url }}' class='img-responsive'/></p>
+	{% endif %}
+
+	{% if instance.image3 %}
+	<p><img src='{{ instance.image3.url }}' class='img-responsive'/></p>
+	{% endif %}
+
+	{% if instance.image4 %}
+	<p><img src='{{ instance.image4.url }}' class='img-responsive'/></p>
+	{% endif %}
+
+	{% if instance.image5 %}
+	<p><img src='{{ instance.image5.url }}' class='img-responsive'/></p>
+	{% endif %}	
 
 
 	{{ instance.content|linebreaks }} <br/>

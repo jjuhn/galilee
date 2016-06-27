@@ -16,7 +16,7 @@
 			</form>
 		</div>
 		<div class="col-xs-4 col-sm-6">
-			<p><a href="{% url 'posts:create' %}" class="btn btn-warning pull-right" role="button">APPLY</a> </p>
+			<p><a href="{% url 'posts:create' %}" class="btn btn-danger pull-right" role="button">POST YOURS</a> </p>
 		</div>
 	</div>
 	<br/>
@@ -27,12 +27,78 @@
 	<div class="row">
 	  <!-- <div class="col-sm-6"> -->
 	    <div class="thumbnail">
-	      {% if obj.image %}
-	      <img src='{{ obj.image.url }}' class='img-responsive'/>
-	      {% endif %}
+
+
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <!--
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			    -->
+			  </ol>
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner  fit_img" role="listbox">
+			    {% if obj.image %}	
+			    <div class="item active">
+			      <img class='fit_img' src='{{ obj.image.url }}' alt="main image 01">
+			      <div class="carousel-caption">
+
+			      </div>
+			    </div>
+			    {% endif %}
+
+				{% if obj.image2 %}			    
+			    <div class="item">
+			      <img class='fit_img' src="{{ obj.image2.url }}" alt="main image 02">
+			      <div class="carousel-caption">
+
+			      </div>
+			    </div>
+			 	{% endif %}
+
+				{% if obj.image3 %}			    
+			    <div class="item">
+			      <img class='fit_img' src="{{ obj.image3.url }}" alt="main image 02">
+			      <div class="carousel-caption">
+
+			      </div>
+			    </div>
+			 	{% endif %}
+
+			 	
+			 	{% if obj.image4 %}			    
+			    <div class="item">
+			      <img class='fit_img' src="{{ obj.image4.url }}" alt="main image 02">
+			      <div class="carousel-caption">
+
+			      </div>
+			    </div>
+			 	{% endif %}
+
+			 	
+			 	{% if obj.image5 %}			    
+			    <div class="item">
+			      <img class='fit_img' src="{{ obj.image5.url }}" alt="main image 02">
+			      <div class="carousel-caption">
+
+			      </div>
+			    </div>
+			 	{% endif %}
+
+
+			  </div>
+			</div>
+
 	      <div class="caption">
 	        <h3><a href ='{{ obj.get_absolute_url }}' class="text-color-orange text-color-orange:hover">{{ obj.title }}</a> <small>{{ obj.timestamp }}</small></h3>
-	        {% if obj.user.get_full_name %} <p>Author: {{ obj.user.get_full_name }}</p> {% endif %}
+	        <p>
+	        {% if obj.user.get_full_name %} Author: {{ obj.user.get_full_name }}	
+	        {% else %} Author: {{ obj.user.get_username }}
+	        {% endif %}
+	        </p>
 	        <p> {{ obj.content|linebreaks|truncatechars:120 }} </p>
 	        <p><a href="{{ obj.get_absolute_url }}" class="btn btn-warning" role="button">View</a> </p>
 	      </div>

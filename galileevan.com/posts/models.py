@@ -5,6 +5,8 @@ from django.utils.text import slugify
 
 from django.conf import settings
 
+
+
 def upload_location(instance, filename):
 	#filebase, extension = filename.split(".")
 	#return "%s/%s.%s" % (instance.id, instance.id, filename)
@@ -19,6 +21,22 @@ class Post(models.Model):
     							null=True, blank=True, 
     							width_field="width_field", 
     							height_field="height_field")
+    image2 = models.ImageField(upload_to=upload_location,
+                                null=True, blank=True, 
+                                width_field="width_field", 
+                                height_field="height_field")
+    image3 = models.ImageField(upload_to=upload_location,
+                                null=True, blank=True, 
+                                width_field="width_field", 
+                                height_field="height_field")
+    image4 = models.ImageField(upload_to=upload_location,
+                                null=True, blank=True, 
+                                width_field="width_field", 
+                                height_field="height_field")
+    image5 = models.ImageField(upload_to=upload_location,
+                                null=True, blank=True, 
+                                width_field="width_field", 
+                                height_field="height_field")
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
     content = models.TextField()
@@ -34,8 +52,15 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-    	return reverse("posts:detail", kwargs={"slug": self.slug})
+    	return reverse("posts:detail", kwargs={"id": self.id})
     	#return "post/%s/" % (self.id)
+
+    def get_edit_url(self):
+        return self.get_absolute_url() + "edit"
+
+    def get_delete_url(self):
+        return self.get_absolute_url() + "delete"
+
 
     class Meta:
     	ordering = ["-timestamp", "-updated"]
