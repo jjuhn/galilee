@@ -13,6 +13,13 @@ from news.models import Post
 
 
 
+def event(request):
+	title = "Event"
+	context = {
+		"title": title,
+	}
+	return render(request, "event.html", context) 
+
 def user_settings(request):
 	form = SignUpForm(request.POST or None)
 	context = {
