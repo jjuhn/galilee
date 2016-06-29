@@ -78,11 +78,11 @@ def posts_create(request):
 
 def posts_detail(request, id):
 	instance = get_object_or_404(Post, id=id)
-	share_string = quote_plus(instance.content)
+	#share_string = quote_plus(instance.content)
 	context = {
 		"title": instance.title,
 		"instance": instance,
-		"share_string": share_string,
+		#"share_string": share_string,
 	}
 	return render(request, "post_detail.html", context)
 

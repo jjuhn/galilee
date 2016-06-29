@@ -27,6 +27,7 @@ from home.views import (
     media, photo, video, 
     # login, register, pwd_reset,
     user_settings,
+    event,
     )
 
 from news.views import (
@@ -86,6 +87,8 @@ urlpatterns = [
     # user settings page
     url(r'^settings/', user_settings, name='settings'),
 
+
+    url(r'^event/', event, name='event'),
 ]
 
 
