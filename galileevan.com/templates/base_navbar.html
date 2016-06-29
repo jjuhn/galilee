@@ -70,7 +70,7 @@
           
             {% if request.user.is_authenticated %}
             <li class="dropdown">
-              <a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">{{request.user.get_username}} 
+              <a href="{% url 'settings' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">{{request.user.get_username}} 
               </a>
               <ul class="dropdown-menu">
                 <li><a href="{% url 'posts:list' %}">POSTINGS</a></li>

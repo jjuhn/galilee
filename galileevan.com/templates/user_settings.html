@@ -10,6 +10,7 @@
 <div class='col-md-4'></div>
 <div class='col-md-4'>
 	<h2>{{message}}</h2>
+	<h3> 사용자 이름을 입력해 주세요. </h3>
 	<form method="POST" action=".">{% csrf_token %}
 		{{ form|crispy }}
 		<input class='btn btn-block btn-warning' type="submit" value="{% trans 'Save Changes' %}" />
