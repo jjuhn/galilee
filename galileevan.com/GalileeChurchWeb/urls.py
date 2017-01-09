@@ -22,7 +22,7 @@ from django.contrib import admin
 from home.views import (
     home,
     welcome, mission, about, staff, location, contact,
-    ministries, ministry, finance, worship, rearing,
+    ministries, ministry, finance, worship, rearing, sunkyo, youngadult,
     community, awana, gaddiel, joys, withim,adult,
     media, photo, video, 
     # login, register, pwd_reset,
@@ -57,7 +57,8 @@ urlpatterns = [
     url(r'^ministries/finance$', finance, name='finance'), # 
     url(r'^ministries/worship$', worship, name='worship'), # 
     url(r'^ministries/rearing$', rearing, name='rearing'), # 
-
+    url(r'^ministries/mission$', sunkyo, name='sunkyo'), # 
+    url(r'^ministries/youngadult$', youngadult, name='youngadult'), # 
 
 
     url(r'^community/$', community, name='community'),

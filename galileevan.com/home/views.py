@@ -109,6 +109,10 @@ def worship(request):
 	return render(request, "mini_worship.html", {})
 def rearing(request):
 	return render(request, "mini_rearing.html", {})
+def sunkyo(request):
+	return render(request, "mini_mission.html", {})
+def youngadult(request):
+	return render(request, "mini_youngadult.html", {})
 
 
 def community(request):
