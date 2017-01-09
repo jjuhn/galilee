@@ -20,20 +20,7 @@
 
 
 {% block content_a %}
-<div class='pull-right'>
-	<a href="{% static 'img/event_1_2016.pdf' %}" class="btn btn-warning" role="button" download>2016 갈릴리 사진 및 UCC 공모 요강 다운받기</a>  
-	{% if request.user.is_authenticated %}
-    <a href="{% url 'posts:create' %}" class="btn btn-danger" role="button">신청하기</a>  
-	{% else %}
-	<a href="{% url 'auth_login' %}" class="btn btn-danger" role="button">신청하기</a>  
-	{% endif %}
-</div>
-<br/><br/><br/>
 
-
-<p><img src="{% static 'img/GalileePoster_White_Homepage.jpg' %}" class='img-responsive'/></p>
-<br/><br/>
-<hr/>
 <br/><br/>
 
 	<!--<div class="row">
@@ -154,7 +141,7 @@ Hello
 		<p class="lead">
 			GALILEE MEDIA
 			<div class="line-separator"></div>
-			<img src="{% static 'img/ministries/worship.jpg' %}" class="img_row" /> 
+			<img src="{% static 'img/galilee_main.jpg' %}" class="img_row" /> 
 		</p>
 	</div>
 </div>

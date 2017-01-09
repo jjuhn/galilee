@@ -38,7 +38,7 @@ else:
     with open(r'c:\etc\galilee_ki.txt') as f:
         SECRET_KEY = f.read().strip()
 
-    DEBUG = True
+    DEBUG = False
     ALLOWED_HOSTS = []
 
 
