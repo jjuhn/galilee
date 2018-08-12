@@ -1,8 +1,11 @@
 import os, sys
-if sys.platform.startswith('linux'): # python 2.x
-	from urllib import quote_plus
-else:
-	from urllib.parse import quote_plus # python 3.x
+
+from urllib import quote_plus
+
+# if sys.platform.startswith('linux'): # python 2.x
+# 	from urllib import quote_plus
+# else:
+# 	from urllib.parse import quote_plus # python 3.x
 
 
 from django.contrib import messages
