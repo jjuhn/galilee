@@ -25,7 +25,7 @@ if sys.platform.startswith('linux'):
     with open('/etc/galilee_ki.txt') as f:
         SECRET_KEY = f.read().strip()
 
-    DEBUG = False
+    DEBUG = True
     ALLOWED_HOSTS = ['galileevan.com', '.galileevan.com', 'galileevan.com/admin']
 
 

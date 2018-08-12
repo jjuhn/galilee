@@ -1,7 +1,7 @@
 from GalileeChurchWeb.settings import *
 
-#DEBUG = True
-DEBUG = False
+DEBUG = True
+#DEBUG = False
 
 #ALLOWED_HOSTS = ['galileevan.com', '.galileevan.com', '.galileevan.com/admin', ]
 #ALLOWED_HOSTS = ['*']
