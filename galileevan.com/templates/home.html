@@ -141,7 +141,26 @@ Hello
 		<p class="lead">
 			GALILEE MEDIA
 			<div class="line-separator"></div>
-			<img src="{% static 'img/galilee_main.jpg' %}" class="img_row" /> 
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			      <img src="{% static 'img/church_external_view.jpg' %}" alt="main image 01">
+			      <div class="carousel-caption">
+
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="{% static 'img/church_internal_view.jpg' %}" alt="main image 02">
+			      <div class="carousel-caption">
+
+			      </div>
+			    </div>
+			 
+			  </div>
+			<!--<img src="{% static 'img/galilee_main.jpg' %}" class="img_row" /> -->
 		</p>
 	</div>
 </div>
