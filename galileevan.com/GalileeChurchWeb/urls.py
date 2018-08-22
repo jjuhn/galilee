@@ -23,7 +23,7 @@ from home.views import (
     home,
     welcome, mission, about, staff, location, contact,
     ministries, ministry, finance, worship, rearing, sunkyo, youngadult,
-    community, awana, gaddiel, joys, withim,adult,
+    community, awana, gaddiel, joys, withim, adult,
     media, photo, video, 
     # login, register, pwd_reset,
     user_settings,
