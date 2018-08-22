@@ -116,11 +116,13 @@ def youngadult(request):
 
 
 def community(request):
-	return render(request, "comm_awana.html", {})
-def awana(request):
-	return render(request, "comm_awana.html", {})
-def gaddiel(request):
-	return render(request, "comm_gaddiel.html", {})
+	return render(request, "comm_sprout.html", {})
+def sprout(request):
+	return render(request, "comm_sprout.html", {})
+def power(request):
+	return render(request, "comm_power.html", {})
+def dream(request):
+	return render(request, "comm_dream.html", {})
 def joys(request):
 	return render(request, "comm_joys.html", {})
 def withim(request):
