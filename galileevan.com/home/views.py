@@ -107,6 +107,8 @@ def finance(request):
 	return render(request, "mini_finance.html", {})
 def worship(request):
 	return render(request, "mini_worship.html", {})
+def communion(request):
+	return render(request, "mini_comm.html", {})
 def rearing(request):
 	return render(request, "mini_rearing.html", {})
 def sunkyo(request):

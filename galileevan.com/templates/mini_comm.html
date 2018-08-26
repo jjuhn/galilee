@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block head_title %} 친교부 | {{ block.super }} {% endblock %}
+{% block content_a %}
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		{% include 'mini_sidebar.html' %}
+	</div>
+
+	<div class="col-xs-12 col-sm-9" >
+		<p>
+			<img src="{% static 'img/ministries/worship.jpg' %}" class="img_row" /> 
+			<div class="line-separator"></div>
+			<h4>친교부</h4>
+			<div class="line-separator"></div>
+						 
+			(1) 역할: 교회내의 친교 및 스포츠 행사에 관한 전반적인 사역을 담당한다.<br/><br/>
+ 
+			(2) 팀사역<br/>
+			- 주일봉사팀: 주일친교 봉사 계획, 운영 및 주방관리 <br/>
+			- 행사팀: 야외예배 기획, 준비, 및 운영, 체육대회 및 스포츠행사 계획 및 운영 <br/>
+			- 여성사역팀: 교회내 여성 사역 계획 및 운영 <br/><br/>
+
+			(3) 중점사역<br/>
+			- 주일식당봉사 및 주방정리정돈<br/>
+			- 야외예배 기획 및 운영<br/>
+			- 교협 체육대회 협조<br/>
+			- 스포츠(클럽) 친교 활성화<br/> 
+			- 여성을 위한 사역 계발<br/><br/>
+		</p>
+		<br/>
+
+	</div>
+</div>
+{% endblock %}
