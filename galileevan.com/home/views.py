@@ -87,6 +87,8 @@ def about(request):
 	return render(request, "welcome_about.html", {})
 def staff(request):
 	return render(request, "welcome_staff.html", {})
+def service(request):
+	return render(request, "welcome_service.html", {})
 def location(request):
 	return render(request, "welcome_location.html", {})
 def contact(request):

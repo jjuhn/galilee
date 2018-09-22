@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block head_title %} 예배 안내 | {{ block.super }} {% endblock %}
+{% block head_title %} 오시는 길 | {{ block.super }} {% endblock %}
 
 {% block content_a %}
 <div class="row">
@@ -10,30 +10,15 @@
 	</div>
 
 	<div class="col-xs-12 col-sm-9" >
-		<p>
-			<img src="{% static 'img/main_01_1024x364.png' %}" class="img_row" /> 
-		</p>
-		<br/>
-		<p>
-			<img src="{% static 'img/main_02_1024x364.png' %}" class="img_row" /> 
-		</p>
-		<br/>
 		
-		<!--
-		<p>
-			<img src="{% static 'img/welcome/time_place_03.jpg' %}" class="img_row"/>
-			<div class="line-separator"></div>
-			761 CARDERO ST. VANCOUVER, BC
-		</p>
+		
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.7616546811337!2d-123.13187302130139!3d49.28091337740559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486722b388f1ec3%3A0x32475f5878197097!2sGalilee+Korean+Presbyterian+Church!5e0!3m2!1sen!2sca!4v1537593162167" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 		<br/>
+
 		<p>
-			<img src="{% static 'img/welcome/time_place_04.jpg' %}" class="img_row" />
-			<div class="line-separator"></div>
-			1755 DAVIE ST. VANCOUVER, BC <br/>
-			BESTWESTERN PLUS SANDS
+		왼쪽 상단의 "길찾기" 누르시면 Google Maps 앱으로 자동으로 이동합니다.
 		</p>
-		-->
 	</div>
 </div>
 {% endblock %}

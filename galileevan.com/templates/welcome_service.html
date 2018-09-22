@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head_title %} 예배 안내 | {{ block.super }} {% endblock %}
+
+{% block content_a %}
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		{% include 'welcome_sidebar.html' %}
+	</div>
+
+	<div class="col-xs-12 col-sm-9" >
+		<p>
+			<img src="{% static 'img/main_01_1024x364.png' %}" class="img_row" /> 
+		</p>
+		<br/>
+		<p>
+			<img src="{% static 'img/main_02_1024x364.png' %}" class="img_row" /> 
+		</p>
+		<br/>
+
+		<p>
+			<img src="{% static 'img/welcome/service_room_level_2.jpg' %}" class="img_row" /> 
+		</p>
+		<br/>
+		<p>
+			<img src="{% static 'img/welcome/service_room_level_3.jpg' %}" class="img_row" /> 
+		</p>
+		<br/>
+		
+
+		
+	</div>
+</div>
+{% endblock %}

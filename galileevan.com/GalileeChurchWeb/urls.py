@@ -21,7 +21,7 @@ from django.contrib import admin
 
 from home.views import (
     home,
-    welcome, mission, about, staff, location, contact,
+    welcome, mission, about, staff, service, location, contact,
     ministries, ministry, finance, worship, communion, rearing, sunkyo, youngadult,
     community, sprout, power, dream, joys, withim, adult,
     media, photo, video, 
@@ -47,6 +47,7 @@ urlpatterns = [
     url(r'^mission/$', mission, name='mission'),
     url(r'^about/$', about, name='about'),
     url(r'^staff/$', staff, name='staff'),
+    url(r'^service/$', service, name='service'),
     url(r'^location/$', location, name='location'),
     url(r'^contact/$', contact, name='contact'),
 
