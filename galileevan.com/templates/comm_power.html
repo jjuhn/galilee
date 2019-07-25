@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block head_title %} 파워 Gen | {{ block.super }} {% endblock %}
+{% block content_a %}
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		{% include 'comm_sidebar.html' %}
+	</div>
+
+	<div class="col-xs-12 col-sm-9" >
+		<p>
+			<img src="{% static 'img/community/power.jpg' %}" class="img_row" /> 
+			<div class="line-separator"></div>
+			<h4>파워 Gen </h4>
+			<div class="line-separator"></div>
+			
+
+			“부끄러울 것이 없는 준비된 일꾼” – 디모데후서 2:15 <br/>
+			AWANA는 어린이 사역에 대한 열정으로 1950년대에 태동하였으며 지금까지 수십년간 연구, 발전되어진 세계적인 청소년 선교 기관입니다. 현재 한국을 포함한 114개국과 미국 내 많은 교회들이 AWANA를 통해 어린이에게 주님의 말씀을 교육하고 있습니다.<br/><br/>
+			 
+			사역원리<br/>
+			아이들이 교회를 떠나는 현실에서 복음을 중심으로 성경말씀을 암송하며 재미있게 지도자 양성과 훈련을 중심으로 하는 프로그램이다.<br/><br/>
+			 
+			5대 사역 원리<br/>
+			1) 복음 중심<br/>
+			2) 성경암송<br/>
+			3) 재미있게<br/>
+			4) 지도자 양성<br/>
+			5) 지도자 훈련<br/><br/>
+			 
+			클럽의 구성<br/>
+			커비단: 미취학 아동 (정규 학교 과정에 들어가기 2년 전까지)<br/>
+			불티단: 유치원(5세)부터 초등학교 2학년<br/>
+			T & T (Truth and Training): 초등학교 3학년 – 6학년<br/>
+			Trek: 중등부 청소년<br/><br/>
+			 
+			프로그램<br/>
+			주일 예배 시간 동안 약 1시간 30분에 걸쳐 AWANA 프로그램이 진행됩니다.<br/><br/>
+			 
+			게임시간 / 30분<br/>
+			어린이들이 재미를 느낄 수 있게하며 건전한 스포츠맨쉽과 협동심, 질서의식 등을 배우게 하는 시간입니다.<br/><br/>
+			 
+			예배 / 20분<br/>
+			찬양, 헌금, 예배를 드립니다.<br/><br/>
+			 
+			성경암송 / 30 분<br/>
+			각 반 별로 모여 개인적으로 선생님과 주 중에 집에서 암송해 온 핸드북의 성경 구절을 확인받는 시간입니다.<br/><br/>
+			 
+			시상 / 10 분<br/>
+			게임과 말씀 암송에 대한 시상을 통해 서로를 격려하는 시간입니다.<br/><br/>
+
+		</p>
+		<br/>
+
+	</div>
+</div>
+{% endblock %}

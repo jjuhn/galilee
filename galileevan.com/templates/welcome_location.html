@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block head_title %} Location | {{ block.super }} {% endblock %}
+{% block head_title %} 오시는 길 | {{ block.super }} {% endblock %}
 
 {% block content_a %}
 <div class="row">
@@ -10,28 +10,70 @@
 	</div>
 
 	<div class="col-xs-12 col-sm-9" >
-		<p>
-			<img src="{% static 'img/welcome/Galilee_main_Dec01-1000x395.jpg' %}" class="img_row" /> 
-		</p>
-		<br/>
-		<p>
-			<img src="{% static 'img/welcome/Galilee_main_Dec02-1000x395.jpg' %}" class="img_row" /> 
-		</p>
-		<br/>
-		<p>
-			<img src="{% static 'img/welcome/time_place_03.jpg' %}" class="img_row"/>
-			<div class="line-separator"></div>
-			761 CARDERO ST. VANCOUVER, BC
-		</p>
+		
+		
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.7616546811337!2d-123.13187302130139!3d49.28091337740559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486722b388f1ec3%3A0x32475f5878197097!2sGalilee+Korean+Presbyterian+Church!5e0!3m2!1sen!2sca!4v1537593162167" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 		<br/>
-		<p>
-			<img src="{% static 'img/welcome/time_place_04.jpg' %}" class="img_row" />
-			<div class="line-separator"></div>
-			1755 DAVIE ST. VANCOUVER, BC <br/>
-			BESTWESTERN PLUS SANDS
-		</p>
 
+		<p>
+		왼쪽 상단의 "길찾기" 누르시면 Google Maps 앱으로 자동으로 이동합니다.<br/><br/>
+		
+		<!-- 버스 노선 설명 -->
+
+		<b>찾아 오시는 길 </b><br/>
+		<div class="line-separator"></div>
+		
+
+		<div class="row">
+			<div class="col-sm-6">
+				Skytrain (Millennium / Expo Line)<br/><br/>
+				> Burrard Station 하차 <br/>
+				> Burrard Station @ Bay 1 에서 "2 MacDonald" 버스로 환승 <br/>
+				> 4 정거장 뒤 Southbound Burrard St @ Nelson St 에서 하차 <br/>
+				> Davie st (ESSO 주유소 방향) 쪽으로 직진 <br/>
+				> Thurlow st 에서 우회전 <br/>
+				> 도착 <br/>
+
+			</div>
+
+			<div class="col-sm-6">
+				Canada Line<br/><br/>
+				> Yaletown-Roundhouse Station 하차 <br/>
+				> Yaletown-Roundhouse Station @ Bay 1 에서 "6 Davie" 버스로 환승 <br/>
+				> Westbound Davie St @ Thurlow St 하차 <br/>
+				> Thurlow st (Shoppers Drug Mart 뒤쪽)으로 직진 <br/>
+				> 도착 <br/>
+
+			</div>
+		</div>
+
+		<br/><br/>
+
+		
+		<div class="row">
+		
+			<div class="col-sm-6">
+				"6 Davie" 버스 <br/><br/>
+				> Westbound Davie St @ Thurlow St 하차 <br/><br/>
+				
+			</div>
+
+			<div class="col-sm-6">
+				"6 Downtown" 버스 <br/><br/>
+				> Eastbound Davie St @ Thurlow St 하차 <br/>
+
+			</div>
+		</div>
+
+		<br/><br/>
+		<b>주차장 안내 </b><br/>
+		<div class="line-separator"></div>
+		
+		주차 공간이 협소하여 교회 주위 스트리트 파킹 혹은 아래 주소의 유료 주차장을 이용해 주시길 부탁 드립니다. <br/>
+		1031 Burnaby St, Vancouver, BC V6E 1N9
+		</p>
 	</div>
+
 </div>
 {% endblock %}

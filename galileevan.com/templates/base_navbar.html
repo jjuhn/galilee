@@ -1,7 +1,6 @@
 {% load staticfiles %} 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-        
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">    
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -10,7 +9,9 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="{% url 'home' %}">
-        <img src="{% static 'img/galilee-logo.png' %}" class="img_row" />
+        <img src="{% static 'img/galilee-logo-cut-front.png' %}" width="100%" />
+        <!-- <img src="" width="100%" /> -->
+        
       </a>
     </div>
 
@@ -23,7 +24,8 @@
             <li><a href="{% url 'mission' %}">교회 비전</a></li>
             <li><a href="{% url 'about' %}">교회 소개</a></li>
             <li><a href="{% url 'staff' %}">섬기는 이</a></li>
-            <li><a href="{% url 'location' %}">예배 안내</a></li>
+            <li><a href="{% url 'service' %}">예배 안내</a></li>
+            <li><a href="{% url 'location' %}">오시는 길</a></li>
             <li><a href="{% url 'contact' %}">연락처</a></li>
           </ul>
         </li>
@@ -31,23 +33,28 @@
         <li class="dropdown">
           <a href="{% url 'ministry' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">MINISTRIES</a>
           <ul class="dropdown-menu">
-            <li><a href="{% url 'ministry' %}">목회부</a></li>
-            <li><a href="{% url 'finance' %}">재정부</a></li>
             <li><a href="{% url 'worship' %}">예배부</a></li>
             <li><a href="{% url 'rearing' %}">양육부</a></li>
+            <li><a href="{% url 'communion' %}">친교부</a></li>
+            <li><a href="{% url 'finance' %}">재정부</a></li>
+            
+          <!--  
+            <li><a href="{% url 'ministry' %}">목회부</a></li>
             <li><a href="{% url 'sunkyo' %}">선교부</a></li>
-            <li><a href="{% url 'youngadult' %}">청년부</a></li>
+            <li><a href="{% url 'youngadult' %}">청년부</a></li>    
+          -->
           </ul> 
         </li>
         
         <li class="dropdown">
-          <a href="{% url 'awana' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">COMMUNITY</a>
+          <a href="{% url 'sprout' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">COMMUNITY</a>
           <ul class="dropdown-menu">
-            <li><a href="{% url 'awana' %}">Awana</a></li>
-            <li><a href="{% url 'gaddiel' %}">GADDIEL(유스)</a></li>
-            <li><a href="{% url 'joys' %}">JOYS(청년1부)</a></li>
-            <li><a href="{% url 'withim' %}">WITHIM(청년2부)</a></li>
-            <li><a href="{% url 'adult' %}">장년부</a></li>
+            <li><a href="{% url 'sprout' %}">새싹 Gen</a></li>
+            <li><a href="{% url 'power' %}">파워 Gen</a></li>
+            <li><a href="{% url 'dream' %}">드림 Gen</a></li>
+            <li><a href="{% url 'joys' %}">JOYS</a></li>
+            <li><a href="{% url 'withim' %}">WITHIM</a></li>
+            <li><a href="{% url 'adult' %}">장년목장</a></li>
           </ul> 
         </li>
         <!--

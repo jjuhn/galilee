@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block head_title %} 친교부 | {{ block.super }} {% endblock %}
+{% block content_a %}
+<div class="row">
+	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		{% include 'mini_sidebar.html' %}
+	</div>
+
+	<div class="col-xs-12 col-sm-9" >
+		<p>
+			<img src="{% static 'img/ministries/koinonia_w.jpg' %}" class="img_row" /> 
+			<div class="line-separator"></div>
+			<h4>친교부</h4>
+			<div class="line-separator"></div>
+						 
+			교회 내 친교 및 교회 행사에 관한 전반적인 사역을 담당한다.<br/><br/>
+ 
+			(1) 경조팀: 결혼식 및 장례식 등 경조사 협조<br/>
+			(2) 새가족팀: 새가족 주일 영접 및 환영<br/>
+			(3) 행사팀: 야외예배 기획, 준비 및 운영, 체육대회 및 스포츠행사 계획 및 운영<br/>
+			(4) 청년1팀: 청년1부 조직, 계획 및 운영<br/>
+			(5) 청년2팀: 청년2부 조직, 계획 및 운영<br/><br/>
+
+			
+		</p>
+		<br/>
+
+	</div>
+</div>
+{% endblock %}

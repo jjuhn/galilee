@@ -21,9 +21,9 @@ from django.contrib import admin
 
 from home.views import (
     home,
-    welcome, mission, about, staff, location, contact,
-    ministries, ministry, finance, worship, rearing, sunkyo, youngadult,
-    community, awana, gaddiel, joys, withim,adult,
+    welcome, mission, about, staff, service, location, contact,
+    ministries, ministry, finance, worship, communion, rearing, sunkyo, youngadult,
+    community, sprout, power, dream, joys, withim, adult,
     media, photo, video, 
     # login, register, pwd_reset,
     user_settings,
@@ -47,6 +47,7 @@ urlpatterns = [
     url(r'^mission/$', mission, name='mission'),
     url(r'^about/$', about, name='about'),
     url(r'^staff/$', staff, name='staff'),
+    url(r'^service/$', service, name='service'),
     url(r'^location/$', location, name='location'),
     url(r'^contact/$', contact, name='contact'),
 
@@ -56,14 +57,16 @@ urlpatterns = [
     url(r'^ministries/ministry$', ministry, name='ministry'),
     url(r'^ministries/finance$', finance, name='finance'), # 
     url(r'^ministries/worship$', worship, name='worship'), # 
+    url(r'^ministries/communion$', communion, name='communion'), # 
     url(r'^ministries/rearing$', rearing, name='rearing'), # 
     url(r'^ministries/mission$', sunkyo, name='sunkyo'), # 
     url(r'^ministries/youngadult$', youngadult, name='youngadult'), # 
 
 
     url(r'^community/$', community, name='community'),
-    url(r'^community/awana$', awana, name='awana'),
-    url(r'^community/gaddiel$', gaddiel, name='gaddiel'),
+    url(r'^community/sprout$', sprout, name='sprout'),
+    url(r'^community/power$', power, name='power'),
+    url(r'^community/dream$', dream, name='dream'),
     url(r'^community/joys$', joys, name='joys'),
     url(r'^community/withim$', withim, name='withim'),
     url(r'^community/adult$', adult, name='adult'),
