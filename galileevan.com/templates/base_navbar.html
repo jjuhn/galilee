@@ -1,104 +1,121 @@
-{% load staticfiles %} 
+{% load staticfiles %}
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">    
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{% url 'home' %}">
-        <img src="{% static 'img/galilee-logo-cut-front.png' %}" width="100%" />
-        <!-- <img src="" width="100%" /> -->
-        
-      </a>
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar"
+                    data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'img/galilee-logo-cut-front.png' %}" width="100%"/>
+                <!-- <img src="" width="100%" /> -->
+
+            </a>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right nav-font-size">
+
+                <li class="dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" href="{% url 'mission' %}"
+                       role="button">WELCOME</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'mission' %}">교회 비전</a></li>
+                        <li><a href="{% url 'about' %}">교회 소개</a></li>
+                        <li><a href="{% url 'staff' %}">섬기는 이</a></li>
+                        <li><a href="{% url 'service' %}">예배 안내</a></li>
+                        <li><a href="{% url 'location' %}">오시는 길</a></li>
+                        <li><a href="{% url 'contact' %}">연락처</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" href="{% url 'ministry' %}"
+                       role="button">MINISTRIES</a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="{% url 'ministry' %}">목회부</a></li>
+                        <li><a href="{% url 'worship' %}">예배부</a></li>
+                        <li><a href="{% url 'rearing' %}">교육부</a></li>
+                        <li><a href="{% url 'sunkyo' %}">선교부</a></li>
+                        <li><a href="{% url 'communion' %}">친교부</a></li>
+                        <li><a href="{% url 'youngadult' %}">청년부</a></li>
+                        <li><a href="{% url 'finance' %}">재정부</a></li>
+
+                        <!--
+                        <li><a href="{% url 'worship' %}">예배부</a></li>
+                        <li><a href="{% url 'rearing' %}">양육부</a></li>
+                        <li><a href="{% url 'communion' %}">친교부</a></li>
+                        <li><a href="{% url 'finance' %}">재정부</a></li>
+
+
+                        <li><a href="{% url 'ministry' %}">목회부</a></li>
+                        <li><a href="{% url 'sunkyo' %}">선교부</a></li>
+                        <li><a href="{% url 'youngadult' %}">청년부</a></li>
+
+
+
+                      -->
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" href="{% url 'sprout' %}"
+                       role="button">COMMUNITY</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'sprout' %}">새싹 Gen</a></li>
+                        <li><a href="{% url 'power' %}">파워 Gen</a></li>
+                        <li><a href="{% url 'dream' %}">드림 Gen</a></li>
+                        <li><a href="{% url 'joys' %}">JOYS</a></li>
+                        <li><a href="{% url 'withim' %}">WITHIM</a></li>
+                        <li><a href="{% url 'adult' %}">장년목장</a></li>
+                    </ul>
+                </li>
+                <!--
+                <li class="dropdown">
+                  <a href="{% url 'photo' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">MEDIA</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="{% url 'photo' %}">사진</a></li>
+                    <li><a href="{% url 'video' %}">비디오</a></li>
+                  </ul>
+                </li>
+                -->
+                <li>
+                    <a href="{% url 'news' %}">NEWS</a>
+                </li>
+
+                {% if request.user.is_authenticated %}
+
+                {% endif %}
+
+                <!--
+                <li>
+
+                    {% if request.user.is_authenticated %}
+                    <li class="dropdown">
+                      <a href="{% url 'settings' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">{{request.user.get_username}}
+                      </a>
+                      <ul class="dropdown-menu">
+                       <li><a href="{% url 'posts:list' %}">POSTINGS</a></li>
+                        <li><a href="{% url 'settings' %}">SETTINGS</a></li>
+                        <li><a href="{% url 'auth_logout' %}">LOGOUT</a></li>
+                      </ul>
+                    </li>
+
+                    {% else %}
+                    <li><a href="{% url 'auth_login' %}">LOGIN</a></li>
+                    {% endif %}
+
+                </li>
+                -->
+
+
+            </ul>
+        </div><!--/.nav-collapse -->
+
+
     </div>
-
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right nav-font-size">
-        
-        <li class="dropdown">
-          <a href="{% url 'mission' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">WELCOME</a>
-          <ul class="dropdown-menu">
-            <li><a href="{% url 'mission' %}">교회 비전</a></li>
-            <li><a href="{% url 'about' %}">교회 소개</a></li>
-            <li><a href="{% url 'staff' %}">섬기는 이</a></li>
-            <li><a href="{% url 'service' %}">예배 안내</a></li>
-            <li><a href="{% url 'location' %}">오시는 길</a></li>
-            <li><a href="{% url 'contact' %}">연락처</a></li>
-          </ul>
-        </li>
-        
-        <li class="dropdown">
-          <a href="{% url 'ministry' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">MINISTRIES</a>
-          <ul class="dropdown-menu">
-            <li><a href="{% url 'worship' %}">예배부</a></li>
-            <li><a href="{% url 'rearing' %}">양육부</a></li>
-            <li><a href="{% url 'communion' %}">친교부</a></li>
-            <li><a href="{% url 'finance' %}">재정부</a></li>
-            
-          <!--  
-            <li><a href="{% url 'ministry' %}">목회부</a></li>
-            <li><a href="{% url 'sunkyo' %}">선교부</a></li>
-            <li><a href="{% url 'youngadult' %}">청년부</a></li>    
-          -->
-          </ul> 
-        </li>
-        
-        <li class="dropdown">
-          <a href="{% url 'sprout' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">COMMUNITY</a>
-          <ul class="dropdown-menu">
-            <li><a href="{% url 'sprout' %}">새싹 Gen</a></li>
-            <li><a href="{% url 'power' %}">파워 Gen</a></li>
-            <li><a href="{% url 'dream' %}">드림 Gen</a></li>
-            <li><a href="{% url 'joys' %}">JOYS</a></li>
-            <li><a href="{% url 'withim' %}">WITHIM</a></li>
-            <li><a href="{% url 'adult' %}">장년목장</a></li>
-          </ul> 
-        </li>
-        <!--
-        <li class="dropdown">
-          <a href="{% url 'photo' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">MEDIA</a>
-          <ul class="dropdown-menu">
-            <li><a href="{% url 'photo' %}">사진</a></li>
-            <li><a href="{% url 'video' %}">비디오</a></li>
-          </ul> 
-        </li>
-        -->
-        <li>
-          <a href="{% url 'news' %}">NEWS</a>
-        </li>
-
-        {% if request.user.is_authenticated %}
-        
-        {% endif %}
-        
-        <!--
-        <li>
-          
-            {% if request.user.is_authenticated %}
-            <li class="dropdown">
-              <a href="{% url 'settings' %}" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">{{request.user.get_username}} 
-              </a>
-              <ul class="dropdown-menu">
-               <li><a href="{% url 'posts:list' %}">POSTINGS</a></li>
-                <li><a href="{% url 'settings' %}">SETTINGS</a></li>
-                <li><a href="{% url 'auth_logout' %}">LOGOUT</a></li>
-              </ul>
-            </li>
-          
-            {% else %}
-            <li><a href="{% url 'auth_login' %}">LOGIN</a></li>
-            {% endif %}
-          
-        </li>
-        -->
-        
-
-      </ul>
-    </div><!--/.nav-collapse -->
-
-
-  </div>
 </nav>
